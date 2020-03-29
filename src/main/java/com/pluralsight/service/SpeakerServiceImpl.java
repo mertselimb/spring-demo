@@ -10,11 +10,9 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;
 
-    public SpeakerServiceImpl(){
-    }
 
-    public SpeakerServiceImpl(SpeakerRepository r ) {
-        repository = r;
+    public SpeakerServiceImpl(SpeakerRepository repository ) {
+        this.repository = repository;
     }
 
     @Override
@@ -22,7 +20,7 @@ public class SpeakerServiceImpl implements SpeakerService {
         return repository.findAll();
     }
 
-    public void setRepository(SpeakerRepository r) {
-        repository = r;
+    public void setRepository(SpeakerRepository repository) {
+        this.repository = repository;
     }
 }
