@@ -8,8 +8,12 @@ import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
 
+    @Autowired
     private SpeakerRepository repository;
 
+    public SpeakerServiceImpl() {
+        System.out.println("No arg init");
+    }
 
     public SpeakerServiceImpl(SpeakerRepository repository ) {
         this.repository = repository;
